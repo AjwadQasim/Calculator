@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+<div id="calculator">
+  <input type="text" name="" id="inp">  
+<div id="buttonsdiv">  
+  <button onclick="numbers(7)" id="button">7</button>
+  <button onclick="numbers(8)" id="button">8</button>
+  <button onclick="numbers(9)" id="button">9</button>
+  <button onclick="numbers('/')" id="button">/</button>
+  <button onclick="numbers(4)" id="button">4</button>
+  <button onclick="numbers(5)" id="button">5</button>
+  <button onclick="numbers(6)" id="button">6</button>
+  <button onclick="numbers('*')" id="button">*</button>
+  <button onclick="numbers(1)" id="button">1</button>
+  <button onclick="numbers(2)" id="button">2</button>
+  <button onclick="numbers(3)" id="button">3</button>
+  <button onclick="numbers('-')" id="button">-</button>
+  <button onclick="numbers(0)" id="button">0</button>
+  <button onclick="numbers('.')" id="button">.</button>
+  <button onclick="cancel()" id="button">⌫</button>
+  <button onclick="numbers('+')" id="button">+</button>
+  <button onclick="allc()" id="button" class="btn">CE</button>
+  <button onclick="equal()" id="button" class="btn">=</button>
+  </div>
+</div>
+<style>    
+#calculator{
+    border: 3px solid black;
+    width: 30rem;
+    border-radius: 1rem;
+    background-color: antiquewhite;
+    margin-top: 6rem;
+    margin-left: 22rem;
+}
+#button{
+    margin-top: 1rem;
+    width: 6rem;
+    height: 3rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    box-shadow: 2px 2px 2px 2px burlywood;
+    border-radius: 0.5rem;
+    border: transparent;
+    background-color:cornsilk;
+}
+#inp{
+    width: 27rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    height: 3rem;
+    border-radius: 6px;
+    border: transparent;
+    text-align: center;
+    font-size: 3rem;
+} 
+.btn{
+    margin-bottom: 1rem;
+}
+</style>
+<script>
+var inp=document.getElementById("inp")
+function numbers(values)
+{
+  inp.value+=values;
+}
+function equal()
+{
+  inp.value=eval(inp.value)
+}
+function allc()
+{
+  inp.value="";
+}
+function cancel()
+{
+    inp.value=inp.value.slice(0,inp.value.length-1)
+}
+</script>
+</body>
+</html>
